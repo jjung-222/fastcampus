@@ -68,3 +68,16 @@ new Swiper('.promotion .swiper-container', {
       nextEl: '.promotion .swiper-next' // 다음 버튼 선택자
     }
   })
+
+  const promotionEl = document.querySelector('.promotion');
+  const promotionToggleBtn = document.querySelector('.toggle-promotion');
+  let isHidePromotion = false;
+  promotionToggleBtn.addEventListener('click', function () {
+    isHidePromotion = !isHidePromotion;
+    if(isHidePromotion) {
+        promotionEl.classList.add('hide');
+    } else {
+        promotionEl.classList.remove('hide');
+    }
+  })
+
